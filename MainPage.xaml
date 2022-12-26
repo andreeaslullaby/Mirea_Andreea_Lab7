@@ -10,7 +10,7 @@
             VerticalOptions="Center">
 
             <Image
-                Source="think.png"
+                Source="happy.png"
                 SemanticProperties.Description="Please choose your icon"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
