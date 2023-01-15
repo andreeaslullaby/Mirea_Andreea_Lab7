@@ -1,4 +1,3 @@
-using Android.Content;
 using Mirea_Andreea_Lab7.Models;
 
 namespace Mirea_Andreea_Lab7;
@@ -34,15 +33,16 @@ async void OnAddButtonClicked(object sender, EventArgs e)
 		Product p;
 		if (listView.SelectedItem != null)
 		{
-			p = listView.SelectedItem as ProductPage;
+			p = listView.SelectedItem as Product;
 			var lp = new ListProduct()
 			{
 				ShopListID = sl.ID,
 				ProductID = p.ID
 			};
 			await App.Database.SaveListProductAsync(lp);
-			p.ListProducts = new List<ListProduct> { lp };
-			await Navigation.PopAsync();
-		}
+            p.ListProducts = new List<ListProduct> { lp };
+            await Navigation.PopAsync();
+
+        }
 	}
 }
